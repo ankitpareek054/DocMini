@@ -5,7 +5,7 @@ let currentDoc = '';
 let documentCache = {};
 
 function joinRoom() {
-    username = document.getElementById('username').value || 'Anonymos';
+    username = document.getElementById('username').value || 'Anonymous';
     room = document.getElementById('room').value || 'default';
 
     document.getElementById('login').style.display = 'none';
