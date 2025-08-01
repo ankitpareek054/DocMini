@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DocMini</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="login">
+        <h2>Enter Room</h2>
+        <input type="text" id="username" placeholder="Your name" />
+        <input type="text" id="room" placeholder="Room name" />
+        <button onclick="joinRoom()">Join</button>
+    </div>
+
+    <div id="editorContainer" style="display:none;">
+        <h1>DocMini - Real-Time Collaborative Editor</h1>
+        <div>
+            <input type="text" id="newDocName" placeholder="New Document Name" />
+            <button onclick="createDocument()">Create Document</button>
+        </div>
+        <div>
+            <label for="docList">Documents:</label>
+            <select id="docList" onchange="openDocument()"></select>
+        </div>
+        <div id="statusBar"></div>
+        <textarea id="editor" placeholder="Start typing..."></textarea>
+        <button onclick="downloadFile()">Download .txt</button>
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
